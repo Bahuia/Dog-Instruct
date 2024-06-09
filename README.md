@@ -1,1 +1,22 @@
-# Dog-Instruct
+# Dog-instruct-wrapper-7b
+
+**Dog-instruct-wrapper-7b** is a set of lora adapters released by our NAACL 2024 Paper [**_DoG-Instruct: Towards Premium Instruction-Tuning Data via Text-Grounded Instruction Wrapping_**](https://arxiv.org/abs/2309.05447), designed specifically for integration with the Llama-2-7b-hf model.
+
+Our trained lora adapters have been released on huggingface [**link**](https://huggingface.co/bahuia/dog-instruct-wrapper-7b-lora).
+
+**Dog-instruct-wrapper-7b** is a tool utilized for converting human-written text into a triple of (instruction, input, output), serving as an exemplar for fine-tuning language model models (LLMs) through instruction-tuning.
+
+Here is an example:
+Raw Text: 
+```text
+Enchiladas Verdes is a traditional Mexican dish consisting of corn tortillas filled with shredded chicken, topped with a green sauce made from tomatillos, serrano peppers, and other ingredients. The dish is then baked with cheese until melted and bubbly. Enchiladas Verdes are known for their flavorful and satisfying taste, making them a popular choice for gatherings and events.
+```
+
+```json
+{
+  "instruction": "Do you have a recipe for Enchiladas Verdes?\n",
+  "input": "",
+  "output": "Ingredients for Enchiladas Verdes:\n- 12 corn tortillas\n- 2 cups shredded chicken (cooked)\n- 1 cup shredded Monterey Jack or Mexican cheese\n- 1/2 cup chopped onion\n- 1/2 cup chopped cilantro, divided\n- 2 cloves garlic, minced\n- 1 tablespoon olive oil\n\nGreen Sauce ingredients:\n- 6 tomatillos, husked and rinsed\n- 2 serrano peppers\n- 1/2 cup chopped onion\n- 2 cloves garlic\n- 1/2 cup chicken broth\n- 1/4 cup sour cream\n- 1/4 cup chopped fresh cilantro\n- Salt and pepper to taste\n\nInstructions:\n1. Preheat the oven to 350\u00b0F (175\u00b0C).\n2. In a saucepan, bring water to a boil. Add the tomatillos and serrano peppers. Boil until tomatillos turn soft and change color. Remove from heat and let them cool.\n3. In a blender, combine the boiled tomatillos, serrano peppers, onion, garlic, chicken broth, sour cream, and cilantro. Blend until smooth. Season with salt and pepper to taste.\n4. In a skillet, heat olive oil and saut\u00e9 the chopped onion and minced garlic until translucent.\n5. Add the shredded chicken to the skillet and stir until heated through. Season with salt and pepper if desired. Remove from heat.\n6. Spread a thin layer of the green sauce at the bottom of a baking dish.\n7. Take a corn tortilla and place a portion of the shredded chicken mixture on one side. Roll tightly and place it seam-side down in the baking dish.\n8. Repeat step 7 for the remaining tortillas.\n9. Pour the green sauce over the rolled tortillas, ensuring they are fully covered.\n10. Sprinkle shredded cheese and half of the chopped cilantro over the enchiladas.\n11. Bake in the preheated oven for approximately 20 minutes or until the cheese is melted and bubbly.\n12. Remove from the oven, garnish with the remaining chopped cilantro, and serve hot."
+}
+```
+
